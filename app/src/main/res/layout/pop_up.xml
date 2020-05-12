@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_dark"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rect_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29.3dp"
+        android:layout_marginTop="38dp"
+        android:letterSpacing="0.0425"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:text="@string/login"
+        android:textColor="@color/blacklight"
+        android:textSize="16.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29.3dp"
+        android:layout_marginTop="5dp"
+        android:letterSpacing="0.0425"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/to_use_travel_you_need_to_login"
+        android:textColor="@color/graydark"
+        android:textSize="12.7sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="29.8dp"
+        android:background="@drawable/rect_blue_dark"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:gravity="center"
+        android:padding="18dp"
+        android:letterSpacing="0.0425"
+        android:text="@string/login_with_facebook"
+        android:textColor="@color/white"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rect_red_dark"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:gravity="center"
+        android:letterSpacing="0.0425"
+        android:padding="18dp"
+        android:text="@string/login_with_google"
+        android:textColor="@color/white"
+        android:textSize="13.3sp" />
+</LinearLayout>

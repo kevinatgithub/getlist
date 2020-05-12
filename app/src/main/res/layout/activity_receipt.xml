@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ReceiptActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginRight="21.3dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15.3dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/done" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/sfpro_display_bold"
+                                android:text="@string/room_booked"
+                                android:textColor="@color/black"
+                                android:textSize="16.7sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="1.5dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/for_le_roi_udaipur_hotel"
+                            android:textColor="@color/black"
+                            android:textSize="11.7sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/dotted_line_rect_light_green"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/payathotel" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sfuitext_semibold"
+                                android:text="@string/amount_to_pay_at_hotel"
+                                android:textColor="@color/blacklight"
+                                android:textSize="12.7sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/sfpro_display_bold"
+                                android:text="@string/_6_580"
+                                android:textColor="@color/blacklight"
+                                android:textSize="11.7sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35.3dp"
+                            android:fontFamily="@font/sfuitext_semibold"
+                            android:text="@string/booking_receipt"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/booked_by"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/booking_com"
+                                android:textColor="@color/blue"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/room_type"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/superior_room_1_king_bed"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="#e2e2e2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="Total Guest :"
+                                android:textColor="#9398a0"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_2"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/checkin_date"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_6_10_2018_11_00_am"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/checkout_date"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_7_10_2018_11_00_am"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/booking_id"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_1982379182"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/payment"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/pending"
+                                android:textColor="@color/red"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15.5dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/coupon_appliedtxt"
+                                android:textColor="@color/graydark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_580_saved"
+                                android:textColor="@color/green"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="30.5dp"
+                        android:background="@color/smokegray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/qr" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.4dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sfuitext_semibold"
+                                android:text="@string/show_qr_code_at_hotel"
+                                android:textColor="@color/blacklight"
+                                android:textSize="12.7sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/click_here_to_scan_qr_code"
+                                android:textColor="@color/graydark"
+                                android:textSize="11.7sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/play_button" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:background="@color/smokegray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/mapview" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.4dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sfuitext_semibold"
+                                android:text="@string/view_on_map"
+                                android:textColor="@color/blacklight"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/click_here_to_get_navigation_to_the_hotel"
+                                android:textColor="@color/graydark"
+                                android:textSize="11.7sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/play_button" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/address"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_7_jetalpur_rd_sampatrao_colony_alkapuri_vadodara_ngujarat_390020"
+                        android:textColor="@color/graydark"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="18.5dp"
+                        android:background="@color/graylight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.2dp"
+                        android:layout_marginTop="22.3dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/nearbyplace" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sfpro_display_semibold"
+                                android:text="@string/near_by"
+                                android:textColor="@color/blacklight"
+                                android:textSize="12.7sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/places_near_your_hotel_and_some_helpful_places"
+                                android:textColor="@color/graydark"
+                                android:textSize="11.7sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="43.8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/train" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/sfpro_display_semibold"
+                                android:text="@string/railway_station"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_2_km_s"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="21.8dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bus" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/sfpro_display_semibold"
+                                android:text="@string/bus_station"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_2_3_km_s"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="21.8dp"
+                            android:background="@color/graylight" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/doctot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/sfpro_display_semibold"
+                                android:text="@string/hospital"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/sf_pro_display_medium"
+                                android:text="@string/_0_7_km_s"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginTop="34dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/graylight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginTop="22.5dp"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="@string/places"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginTop="1.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/popular_places_near_your_hotel"
+                        android:textColor="@color/graydark"
+                        android:textSize="11.7sp" />
+                    <!--recycler code-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/reciept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:nestedScrollingEnabled="false" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rect_blue_cornor1"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:paddingLeft="65dp"
+        android:paddingTop="15dp"
+        android:paddingRight="65dp"
+        android:paddingBottom="15dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="13.3sp" />
+</RelativeLayout>

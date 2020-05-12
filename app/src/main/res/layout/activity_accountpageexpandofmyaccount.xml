@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AccountpageexpandofmyaccountActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.3dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/rushabh_patel"
+                        android:textColor="@color/black"
+                        android:textSize="16.7sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="2.3dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_9549990169_rushabhpatel381_gmail_com"
+                    android:textColor="@color/black"
+                    android:textSize="11.7sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20.8dp"
+                    android:background="@color/graylight" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.8dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfpro_display_semibold"
+                            android:text="@string/my_accounts"
+                            android:textColor="@color/blacklight"
+                            android:textSize="12.7sp" />
+
+                        <ImageView
+                            android:id="@+id/up_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/up_button" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.8dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfpro_display_semibold"
+                            android:text="@string/my_accounts"
+                            android:textColor="@color/blacklight"
+                            android:textSize="12.7sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/up_button" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/addresses_payments_referrals_amp_offers"
+                    android:textColor="@color/graydark"
+                    android:textSize="11.7sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20.8dp"
+                    android:background="@color/graylight" />
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mobipink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18.3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/manage_address"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13.3sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5.5dp"
+                        android:background="@color/graylight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mobipink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18.3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/payment"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13.3sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5.5dp"
+                        android:background="@color/graylight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mobipink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18.3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/bookmarked"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13.3sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5.5dp"
+                        android:background="@color/graylight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mobipink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18.3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/referrals_txt"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13.3sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5.5dp"
+                        android:background="@color/graylight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mobipink" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18.3dp"
+                            android:fontFamily="@font/sf_pro_display_medium"
+                            android:text="@string/offers"
+                            android:textColor="@color/blacklight"
+                            android:textSize="13.3sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5.5dp"
+                        android:background="@color/graylight" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.8dp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="@string/help"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/faq_s_amp_links"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/smokegray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.8dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/wharsapp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="14.2dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="@string/get_booking_updates_on_whatsapp"
+                        android:textColor="@color/blacklight"
+                        android:textSize="15.5sp" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/get_notificatoins_on_whatsapp"
+                    android:textColor="@color/graydark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="21dp"
+                android:background="@color/smokegray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="@string/recent_bookings"
+                    android:letterSpacing="0.0225"
+                    android:textColor="@color/blacklight"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="20.8dp"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18.2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="@string/le_roi_udaipur_hotel"
+                        android:textColor="@color/black"
+                        android:textSize="15.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/udaipur"
+                        android:textColor="@color/graydark"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="7.1dp"
+                        android:layout_height="12.6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/grayarrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_by"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booking_com"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_date"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_1_10_2018"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21.2dp"
+                    android:background="@color/graylight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21.2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="@string/leela_palace"
+                        android:textColor="@color/black"
+                        android:textSize="15.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/udaipur"
+                        android:textColor="@color/graydark"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/grayarrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_by"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booking_com"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_date"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_1_10_2018"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21.2dp"
+                    android:background="@color/graylight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21.2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="@string/upre_1940"
+                        android:textColor="@color/black"
+                        android:textSize="15.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/udaipur"
+                        android:textColor="@color/graydark"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="7.1dp"
+                        android:layout_height="12.6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/grayarrow" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_by"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_by"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booked_date"
+                        android:textColor="@color/graydark"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_1_10_2018"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21.2dp"
+                    android:background="@color/graylight" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21.2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/view_more_bookings"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="13.5dp"
+                        android:src="@drawable/grayarrow"
+                        android:tint="@color/blacklight" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="18.3dp"
+                android:background="@color/smokegray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="21.3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="@string/logout"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".Open_popup_boxActivity">
+
+    <TextView
+        android:id="@+id/button_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31.3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:background="@drawable/rect_blue_cornor"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:padding="13dp"
+        android:text="@string/connect_with_facebook_and_google"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+</LinearLayout>

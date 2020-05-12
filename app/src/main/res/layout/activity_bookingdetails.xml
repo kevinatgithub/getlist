@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BookingdetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.3dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/sfpro_display_bold"
+                    android:text="@string/booking_details"
+                    android:letterSpacing="0.0425"
+                    android:textColor="@color/black"
+                    android:textSize="16.7sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.0425"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/for_le_roi_udaipur_hotel_udaipur"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20.8dp"
+                android:background="@color/graydark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25.8dp"
+                android:background="@drawable/dotted_line_rect_light_green"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/payathotel"
+                    android:paddingLeft="5dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sfuitext_semibold"
+                    android:text="@string/amount_paid_at_hotel"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sfpro_display_bold"
+                    android:text="@string/_6_580"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/blacklight"
+                    android:textSize="11.7sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35.3dp"
+                android:fontFamily="@font/sfpro_display_semibold"
+                android:text="@string/booking_receipt"
+                android:textColor="@color/black"
+                android:textSize="12.7sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/booked_by"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/booking_com"
+                    android:textColor="@color/blue"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/room_type"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/superior_room_1_king_bed"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/total_guest"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/checkin_date"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_6_10_2018_11_00_am"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/checkout_date"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_7_10_2018_11_00_am"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/booking_id"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_1982379182"
+                    android:textColor="@color/blacklight"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/paymenttext"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/paid_in_cash"
+                    android:textColor="@color/darkblue"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="@color/graylight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/coupontxt"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.7sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_580_saved"
+                    android:textColor="@color/green"
+                    android:textSize="12.7sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/graylight"
+                android:layout_marginTop="20.7dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="20.7dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_hotel_profle"
+                    android:textSize="12.7sp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:textColor="@color/blacklight"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/whitearrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

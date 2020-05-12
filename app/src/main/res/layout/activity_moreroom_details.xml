@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Moreroom_detailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/rooms"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/filter"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/filter" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/for_le_roi_udaipur_hotel"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="18dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mytrip"
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/mytrip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/make_my_trip"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15.2dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="12.8dp"
+                    android:background="@drawable/dotted_line_rect"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/v_total_per_night"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/play_button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/booking" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/booking_com"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20.2dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/superior_room_1_king_bed"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest"
+                    android:textColor="@color/graydark"
+                    android:textSize="11.3sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="7.8dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/deluxe_room"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/rs6783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="11.7sp"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest_breakfast"
+                    android:textColor="@color/graydark"
+                    android:textSize="11.3sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/yatra" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/yatra_com"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="280.3dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="12.8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/dotted_line_rect_parot"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/_70_discount_on_1st_booking_till_31st_dec"
+                        android:textColor="@color/black"
+                        android:paddingRight="9.3dp"
+                        android:layout_gravity="center"
+                        android:paddingLeft="11.7dp"
+                        android:textSize="12.7sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/superior_room"
+                        android:textColor="@color/blacklight"
+                        android:textSize="13.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.3sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="7.8dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/pool_amp_garden_view_rooms"
+                        android:textColor="@color/blacklight"
+                        android:textSize="13.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="11.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest"
+                    android:textColor="@color/graydark"
+                    android:textSize="12.3sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/clearttrip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/cleartrip_com"
+                        android:textColor="@color/blue"
+                        android:textSize="12.7sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15.2dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/superior_room"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest"
+                    android:textColor="@color/graydark"
+                    android:textSize="11.3sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="7.8dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/pool_amp_garden_view_rooms"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/sfpro_display_bold"
+                        android:text="@string/_6_783"
+                        android:textColor="@color/blacklight"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/grather_thaen" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27.7dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/_2_guest"
+                    android:textColor="@color/graydark"
+                    android:layout_marginBottom="25dp"
+                    android:textSize="11.3sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

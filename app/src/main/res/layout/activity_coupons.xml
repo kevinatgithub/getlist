@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CouponsActivity">
+
+    <include layout="@layout/toolbar_coupons" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/graylight4"
+        android:orientation="vertical"
+        android:padding="23dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_border"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:hint="@string/enter_coupon_code"
+                android:background="@color/transferent"
+                android:inputType="text"
+                android:textColor="@color/graydark"
+                android:textColorHint="@color/graydark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply"
+                android:textColor="@color/bluelight"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25.8dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfpro_display_semibold"
+            android:text="@string/available_coupons"
+            android:textColor="@color/blacklight"
+            android:letterSpacing="0.0625"
+            android:textSize="12.5sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_pink"
+                    android:orientation="horizontal"
+                    android:padding="9dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/phonepe" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:paddingRight="3dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/phonepenew"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sfpro_display_bold"
+                android:text="@string/apply"
+                android:textColor="@color/blacklight"
+                android:textSize="13.5sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_30_discount_using_phonepe"
+            android:textColor="@color/blacklight"
+            android:textSize="15sp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:layout_marginTop="14.7dp"/>
+
+        <TextView
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/use_code_phonepenew_amp_get_30_discount_upto_rs_150_on_nyour_booking"
+            android:textSize="12.5sp"
+            android:textColor="@color/graydark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/more_details"
+            android:textSize="14sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graylight"
+            android:layout_marginTop="18.5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_pink"
+                    android:orientation="horizontal"
+                    android:padding="9dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/paytm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/paytm478"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sfpro_display_bold"
+                android:text="@string/apply"
+                android:textColor="@color/darkblue"
+                android:textSize="13.5sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_50_discount_using_paytm"
+            android:textColor="@color/blacklight"
+            android:textSize="15sp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:layout_marginTop="14.7dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/use_code_paytm478_amp_get_50_discount_upto_rs_200_on_nyour_booking"
+            android:textSize="13sp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/graydark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more_details"
+            android:textColor="@color/darkblue"
+            android:textSize="13sp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graylight"
+            android:layout_marginTop="18.5dp"/>
+
+    </LinearLayout>
+</LinearLayout>
