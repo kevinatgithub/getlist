@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.kevs.biyang.getlist" >
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,16 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
         <activity android:name=".MainActivity" >
-        </activity>
-        <activity android:name=".Home_pageActivity">
-        </activity>
-        <activity android:name=".Result_page_travelumActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LoadListActivity"></activity>
+        <activity android:name=".Home_pageActivity">
+        </activity>
+        <activity android:name=".UpdateItemActivity">
+        </activity>
+        <activity android:name=".Result_page_travelumActivity">
+
 
         </activity>
         <activity android:name=".Hotel_page_travelum" />
@@ -32,7 +41,9 @@
         <activity android:name=".PaymentActivity" />
         <activity android:name=".CouponsActivity" />
         <activity android:name=".ReceiptActivity" />
-        <activity android:name=".BookingdetailsActivity" />
+        <activity android:name=".BookingdetailsActivity">
+
+        </activity>
         <activity android:name=".AccountpageexpandofmyaccountActivity" />
         <activity android:name=".Open_popup_boxActivity"></activity>
     </application>

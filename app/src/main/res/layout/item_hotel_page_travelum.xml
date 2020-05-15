@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="15dp"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/image_container">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Home_pageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20.7dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/ic_basket" />
+
+        <TextView
+            android:fontFamily="@font/sfpro_display_bold"                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET LIST"
+            android:textSize="17.5sp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="13.3dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+
+        <ImageView
+            android:id="@+id/action_menu"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/menu" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_app_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.0425"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="App is Online"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_gray_border"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20.7dp"
+        android:layout_marginRight="20.7dp">
+
+
+        <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:hint="Enter Item Name"
+            android:background="@color/transferent"
+            android:inputType="text"
+            android:textColor="@color/graydark"
+            android:textColorHint="@color/graydark"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/action_save_item"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textColor="@color/bluelight"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemsswipetorefresh">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop=".3dp"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingTop="15dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
