@@ -30,9 +30,8 @@
 
             <ImageView
                 android:id="@+id/img_thumb"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:scaleType="centerInside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/img2" />
 
             <TextView

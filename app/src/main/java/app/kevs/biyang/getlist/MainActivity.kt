@@ -159,16 +159,19 @@ class MainActivity : AppCompatActivity() {
 
         async {
             var imgUrl : String? = null
+            var remarks : String? = null
             if (Helper.isNetworkConnected(this@MainActivity) && await {Helper.isInternetAvailable()}){
                 val imgResult = await { Helper.getRelatedImagesUrlFromWeb(itemName, 1) }
                 if (imgResult.size > 0)
                     imgUrl = imgResult.get(0)
+
+                remarks = await { Helper.getDescriptionFromWikipedia(itemName) }
             }
             dataManager?.addItem(
                 GroceryItem(
                     null,
                     itemName,
-                    1,null,null,null,null,imgUrl, false,0
+                    1,null,null,remarks,null,imgUrl, false,0
                 ),
                 onSuccess = {
                     refreshList()
@@ -220,9 +223,15 @@ class MainActivity : AppCompatActivity() {
 
             it.apply {
                 lbl_name.text = item.name?.capitalize()
+                val len = item.remarks?.length ?: 0
+                val maxlen = if (len >= 400){
+                    400
+                }else{
+                    len
+                }
                 lbl_description.text = """
                     ${item.quantityType ?: "no quantity"} | ${item.category ?: "no category"} 
-                    ${item.remarks ?: "No remarks"}
+                    ${item.remarks?.substring(0,maxlen) ?: "No remarks"}
                 """.trimIndent()
                 img_thumb.setBackgroundDrawable(resources.getDrawable(R.drawable.img3))
 

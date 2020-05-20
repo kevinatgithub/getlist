@@ -43,8 +43,14 @@ class GroceryItemAdapter(val ctx : Context,
                 ""
             }
             name.text = item.name?.capitalize()
+            val len = item.remarks?.length ?: 0
+            var maxlength = if (len > 85){
+                85
+            }else{
+                item.remarks?.length
+            }
             description.text = """
-                ${item.quantityType ?: "No Quantity"} ${item.category ?: "No Category"} ${item.remarks ?: "No Remarks"}
+                ${item.quantityType ?: ""} ${item.category ?: ""} ${item.remarks?.substring(0,maxlength!!) ?: ""}
                 ${completeStatus}
             """.trimIndent()
 

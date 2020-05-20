@@ -161,6 +161,34 @@ object Helper {
         return result
     }
 
+    fun getDescriptionFromWikipedia(keyword : String) : String?{
+        val nkeyword = keyword.replace(" ","_")
+        var url = "https://en.wikipedia.org/wiki/KEYWORD"
+        url = url.replace("KEYWORD", nkeyword)
+
+        val result = ArrayList<String>()
+        try {
+
+            val document: Document = Jsoup.connect(url).validateTLSCertificates(false).get()
+            val div : Element = document.select("div#mw-content-text").first()
+            if (div == null){
+                return null
+            }
+            val div2 = div.select("div").first()
+            if (div2 == null){
+                return null
+            }
+            val ps = div2.select("p").take(10)
+            ps.forEach {
+                if (it.text().length > 0)
+                    return it.text()
+            }
+            return null
+        }catch (e : java.lang.Exception){
+            return null
+        }
+    }
+
     fun addWatermarkToBitmap(
         src: Bitmap,
         watermark: String,
