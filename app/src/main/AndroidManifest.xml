@@ -26,26 +26,6 @@
         </activity>
         <activity android:name=".UpdateItemActivity">
         </activity>
-        <activity android:name=".Result_page_travelumActivity">
-
-
-        </activity>
-        <activity android:name=".Hotel_page_travelum" />
-        <activity android:name=".List_recycleActivity" />
-        <activity android:name=".Splace_screenActivity">
-
-        </activity>
-        <activity android:name=".Moreroom_detailsActivity" />
-        <activity android:name=".Conformation_pageActivity" />
-        <activity android:name=".Applied_couponActivity" />
-        <activity android:name=".PaymentActivity" />
-        <activity android:name=".CouponsActivity" />
-        <activity android:name=".ReceiptActivity" />
-        <activity android:name=".BookingdetailsActivity">
-
-        </activity>
-        <activity android:name=".AccountpageexpandofmyaccountActivity" />
-        <activity android:name=".Open_popup_boxActivity"></activity>
     </application>
 
 </manifest>
