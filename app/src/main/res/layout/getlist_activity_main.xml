@@ -71,6 +71,12 @@
         android:layout_marginLeft="20.7dp"
         android:layout_marginRight="20.7dp">
 
+        <ImageView
+            android:id="@+id/action_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_expand" />
+
 
         <EditText
             android:id="@+id/txt_name"

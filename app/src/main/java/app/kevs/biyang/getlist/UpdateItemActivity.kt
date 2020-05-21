@@ -52,6 +52,20 @@ class UpdateItemActivity : AppCompatActivity() {
                 loadRelatedImages()
             }
         }
+
+        action_load_remark.setOnClickListener {
+            confirmLoadDescription()
+        }
+    }
+
+    private fun UpdateItemActivity.confirmLoadDescription() {
+        Helper.showConfirm(this, "Load Description from Web?") {
+            async {
+                val remarks =
+                    await { Helper.getDescriptionFromWikipedia(txt_name.text.toString().trim()) }
+                txt_remarks.setText(remarks)
+            }
+        }
     }
 
     private fun attemptSave() {
@@ -83,7 +97,8 @@ class UpdateItemActivity : AppCompatActivity() {
             txt_name.text.toString().trim(),
             0,
             txt_quantity.text.toString().trim(),
-            category,null, null, imgUrl, false, 0
+            category,
+            txt_remarks.text.toString().trim(), null, imgUrl, false, 0
         )
 
         dataManager?.updateItem(item, onSuccess = {finish()}){handleError(it)}
@@ -108,6 +123,7 @@ class UpdateItemActivity : AppCompatActivity() {
     private fun populateFields() {
         txt_name.setText(ITEM?.name)
         txt_quantity.setText("${ITEM?.quantityType ?: ""}")
+        txt_remarks.setText(ITEM?.remarks ?: "")
 
         if (!ITEM?.category.isNullOrEmpty()){
             val adapter = CATEGORY_ADAPTER

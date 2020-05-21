@@ -70,6 +70,43 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        action_expand.setOnClickListener {
+            saveMultipleItems()
+        }
+    }
+
+    private fun MainActivity.saveMultipleItems() {
+        Helper.prompt(this, "", "Enter Items in different rows") {
+            var items = it.split("\n");
+            items.forEach {
+                async {
+                    val itemName = it.trim().capitalize()
+                    var imgUrl: String? = null
+                    var remarks: String? = null
+                    if (Helper.isNetworkConnected(this@MainActivity) && await { Helper.isInternetAvailable() }) {
+                        val imgResult = await { Helper.getRelatedImagesUrlFromWeb(itemName, 1) }
+                        if (imgResult.size > 0)
+                            imgUrl = imgResult.get(0)
+
+                        remarks = await { Helper.getDescriptionFromWikipedia(itemName) }
+                    }
+                    dataManager?.addItem(
+                        GroceryItem(
+                            null,
+                            itemName,
+                            1, null, null, remarks, null, imgUrl, false, 0
+                        ),
+                        onSuccess = {
+                            refreshList()
+                            txt_name.setText("")
+                        },
+                        onError = { handleError(it) }
+                    )
+                    onError { handleError(it) }
+                }
+            }
+        }
     }
 
     private fun performSearch() {
@@ -201,7 +238,8 @@ class MainActivity : AppCompatActivity() {
     private fun populateList() {
         if (GROCERY_LISTS.size > 0){
             setState(State.HAS_RESULT)
-            val sorted = GROCERY_LISTS?.sortedWith(compareBy({it.category}, {it.category}))
+            var sorted = GROCERY_LISTS?.sortedWith(compareBy({it.category}, {it.category}))
+            sorted = sorted.sortedWith(compareBy({it.name?.toUpperCase()},{it.name?.toUpperCase()}))
             val items = ArrayList<GroceryItem>()
             if (sorted != null){
                 items.addAll(sorted)
