@@ -1,20 +1,21 @@
 package app.kevs.biyang.getlist.libs
 
+import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.*
 import android.net.ConnectivityManager
+import android.os.Environment
 import android.util.Base64
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import java.io.ByteArrayOutputStream
-import java.io.IOException
-import java.io.InputStream
+import java.io.*
+import java.lang.reflect.Type
 import java.net.HttpURLConnection
 import java.net.InetAddress
 import java.net.URL
@@ -132,6 +133,29 @@ object Helper {
         alertDialog.show()
     }
 
+    fun promptSpinner(ctx : Context,
+               title : String,
+               message : String,
+                      items : List<String>,
+               onSubmit : (input : String) -> Unit) : Dialog{
+        val inputAlert = AlertDialog.Builder(ctx)
+        inputAlert.setTitle(title)
+        inputAlert.setMessage(message)
+        val userInput = Spinner(ctx)
+        val adapter = ArrayAdapter<String>(ctx, android.R.layout.simple_spinner_dropdown_item, items)
+        userInput.adapter = adapter
+        inputAlert.setView(userInput)
+        inputAlert.setPositiveButton(
+            "Submit"
+        ) { dialog, which -> onSubmit(userInput.selectedItem.toString()) }
+        inputAlert.setNegativeButton(
+            "Cancel"
+        ) { dialog, which -> dialog.dismiss() }
+        val alertDialog = inputAlert.create()
+        alertDialog.show()
+        return alertDialog
+    }
+
     fun getBitmapFromUrl(src : String) : Bitmap?{
         return try {
             val url = URL(src)
@@ -151,10 +175,10 @@ object Helper {
 
         val result = ArrayList<String>()
         val document: Document = Jsoup.connect(url).validateTLSCertificates(false).get()
-        val imgs : List<Element> = document.select("img").take(10)
+        val imgs : List<Element> = document.select("img").take(10 * 2)
         imgs.map {
             val imgBase64 = it.attr("data-src")
-            if (imgBase64 != null){
+            if (!imgBase64.isNullOrEmpty()){
                 result.add(imgBase64)
             }
         }
@@ -178,9 +202,9 @@ object Helper {
             if (div2 == null){
                 return null
             }
-            val ps = div2.select("p").take(10)
+            val ps = div2.select("p").take(100)
             ps.forEach {
-                if (it.text().length > 0)
+                if (it.text().length > 0 && !it.text().equals("${keyword.capitalize()} may refer to:"))
                     return it.text()
             }
             return null
@@ -229,5 +253,31 @@ object Helper {
         }
     }
 
-    
+    fun <T>clone(obj: Any, t: Class<T>){
+        val json = Gson().toJson(obj)
+        return Gson().fromJson(json,t as Type)
+    }
+
+    fun bitmapToFile(name : String, bmp : Bitmap) : String{
+        val file_path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/images";
+        val dir = File(file_path);
+        if(!dir.exists())
+            dir.mkdirs();
+        val file = File(dir, name + ".png");
+        val fOut = FileOutputStream(file);
+
+        bmp.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+        fOut.flush();
+        fOut.close();
+        return file_path + name + ".png"
+    }
+
+    fun fileToImageView(imageView : ImageView, path : String){
+        val imgFile = File(path)
+
+        if (imgFile.exists()) {
+            val myBitmap = BitmapFactory.decodeFile(imgFile.absolutePath)
+            imageView.setImageBitmap(myBitmap)
+        }
+    }
 }

@@ -14,7 +14,7 @@ object TravelumHelper {
     fun ShowDialog(ctx : Context,
                    layout : Int,
                    height : Double = 0.480,
-                   onAssignUIEventHandlers : (dialog : Dialog) -> Unit){
+                   onAssignUIEventHandlers : (dialog : Dialog) -> Unit) : Dialog{
         val slideDialog = Dialog(ctx, R.style.CustomDialogAnimation)
         slideDialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         // Setting dialogview
@@ -47,5 +47,6 @@ object TravelumHelper {
         slideDialog.show()
 
         onAssignUIEventHandlers(slideDialog)
+        return slideDialog
     }
 }

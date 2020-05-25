@@ -10,15 +10,25 @@ import app.kevs.biyang.getlist.libs.models.GroceryItem
 import co.metalab.asyncawait.async
 import kotlinx.android.synthetic.main.getlist_row_item.view.*
 
+enum class AdapterOrientation{
+    VERTICAL, HORIZONTAL
+}
+
 class GroceryItemAdapter(val ctx : Context,
                          val items : ArrayList<GroceryItem>,
+                         val orientation : AdapterOrientation? = AdapterOrientation.VERTICAL,
                          val onRowClick : (item : GroceryItem) -> Unit,
                          val onRowLongClick : (item : GroceryItem) -> Unit)
     :RecyclerView.Adapter<GroceryItemViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroceryItemViewHolder {
+        val layout = when (orientation){
+            AdapterOrientation.VERTICAL -> R.layout.getlist_row_item
+            AdapterOrientation.HORIZONTAL -> R.layout.getlist_grid_item
+            else -> R.layout.getlist_row_item
+        }
         return GroceryItemViewHolder(
             LayoutInflater.from(ctx).inflate(
-                R.layout.getlist_row_item,
+                layout,
                 parent,
                 false
             )

@@ -3,11 +3,11 @@ package app.kevs.biyang.getlist.libs.data.source
 import android.content.Context
 import app.kevs.biyang.getlist.libs.Helper
 import app.kevs.biyang.getlist.libs.data.DataSource
-import app.kevs.biyang.getlist.libs.models.Category
-import app.kevs.biyang.getlist.libs.models.GroceryItem
-import app.kevs.biyang.getlist.libs.models.InListItem
-import app.kevs.biyang.getlist.libs.models.ItemAlternative
+import app.kevs.biyang.getlist.libs.models.*
 import io.realm.Realm
+import io.realm.RealmResults
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Db(context: Context) : DataSource {
 
@@ -249,6 +249,56 @@ class Db(context: Context) : DataSource {
                 result.add(it.category!!)
         }
         onSuccess(result)
+    }
+
+    override fun getCards(onResult: (cards: RealmResults<MonsterCard>) -> Unit) {
+        onResult(realm.where(MonsterCard::class.java).findAll())
+    }
+
+    override fun getCard(_id: String, onResult: (card: MonsterCard?) -> Unit) {
+        onResult(realm.where(MonsterCard::class.java).equalTo("_id",_id).findFirst())
+    }
+
+    override fun createCard(card: MonsterCard, onComplete: () -> Unit) {
+        realm.beginTransaction()
+        card._id = UUID.randomUUID().toString()
+        realm.insertOrUpdate(card)
+        realm.commitTransaction()
+        onComplete()
+    }
+
+    override fun updateCard(card: MonsterCard, onComplete: () -> Unit) {
+        realm.beginTransaction()
+        val record = realm.where(MonsterCard::class.java).equalTo("_id",card._id).findFirst()
+        if (record != null){
+            record.name = card.name
+            record.description = card.description
+            record.skill = card.skill
+            record.imgUrl = card.imgUrl
+            record.category = card.category
+        }
+        onComplete()
+    }
+
+    override fun deleteCard(id: String, onComplete: () -> Unit) {
+        realm.beginTransaction()
+        val card = realm.where(MonsterCard::class.java).equalTo("_id",id).findFirst()
+        card?.deleteFromRealm()
+        realm.commitTransaction()
+        onComplete()
+    }
+
+    override fun clearCards(onComplete: () -> Unit) {
+        realm.beginTransaction()
+        realm.delete(MonsterCard::class.java)
+        realm.commitTransaction()
+        onComplete()
+    }
+
+    override fun transact(onTrasaction: () -> Unit) {
+        realm.beginTransaction()
+        onTrasaction()
+        realm.commitTransaction()
     }
 
     fun getCategories(callback: (categories: ArrayList<Category>) -> Unit) {

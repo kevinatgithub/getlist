@@ -4,10 +4,12 @@ import app.kevs.biyang.getlist.libs.api.ApiManager
 import app.kevs.biyang.getlist.libs.data.DataSource
 import app.kevs.biyang.getlist.libs.models.GroceryItem
 import app.kevs.biyang.getlist.libs.models.ItemAlternative
+import app.kevs.biyang.getlist.libs.models.MonsterCard
 import com.google.gson.Gson
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import io.realm.RealmResults
 
 class Api : DataSource {
 
@@ -252,6 +254,34 @@ class Api : DataSource {
         onSuccess: (items: ArrayList<String>) -> Unit,
         onError: (message: Throwable) -> Unit
     ) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCards(onResult: (cards: RealmResults<MonsterCard>) -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCard(_id: String, onResult: (card: MonsterCard?) -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun createCard(card: MonsterCard, onComplete: () -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun updateCard(card: MonsterCard, onComplete: () -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun deleteCard(id: String, onComplete: () -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun clearCards(onComplete: () -> Unit) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun transact(onTrasaction: () -> Unit) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

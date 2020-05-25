@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Home_pageActivity">
+    tools:context=".MonsterCardsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,17 +50,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_app_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:letterSpacing="0.0425"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="3dp"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:text="App is Online"
-        android:textColor="@color/black"
-        android:textSize="11sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,13 +68,14 @@
             android:src="@drawable/ic_expand" />
 
 
+
         <EditText
             android:id="@+id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_display_medium"
-            android:hint="Enter Item Name"
+            android:hint="Enter Card Name"
             android:background="@color/transferent"
             android:inputType="text"
             android:textColor="@color/graydark"
@@ -93,13 +83,20 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/action_save_item"
+            android:id="@+id/action_create_card"
             android:fontFamily="@font/sf_pro_display_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SAVE"
+            android:text="CREATE"
             android:textColor="@color/bluelight"
+            android:layout_marginRight="8dp"
             android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/action_select_category"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_cards" />
     </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -108,7 +105,7 @@
         android:id="@+id/itemsswipetorefresh">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_items"
+            android:id="@+id/rv_cards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"

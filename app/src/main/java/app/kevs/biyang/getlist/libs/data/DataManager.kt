@@ -8,6 +8,8 @@ import app.kevs.biyang.getlist.libs.data.source.Db
 import app.kevs.biyang.getlist.libs.models.Category
 import app.kevs.biyang.getlist.libs.models.GroceryItem
 import app.kevs.biyang.getlist.libs.models.ItemAlternative
+import app.kevs.biyang.getlist.libs.models.MonsterCard
+import io.realm.RealmResults
 
 enum class SOURCE_TYPE{
     API, DATABASE
@@ -152,6 +154,34 @@ class DataManager(context: Context) : DataSource {
         onError: (message: Throwable) -> Unit
     ) {
         getDataSource().getCategoriesFromItems(onSuccess, onError)
+    }
+
+    override fun getCards(onResult: (cards: RealmResults<MonsterCard>) -> Unit) {
+        getDataSource().getCards(onResult)
+    }
+
+    override fun getCard(_id: String, onResult: (card: MonsterCard?) -> Unit) {
+        getDataSource().getCard(_id, onResult)
+    }
+
+    override fun createCard(card: MonsterCard, onComplete: () -> Unit) {
+        getDataSource().createCard(card, onComplete)
+    }
+
+    override fun updateCard(card: MonsterCard, onComplete: () -> Unit) {
+        getDataSource().updateCard(card, onComplete)
+    }
+
+    override fun deleteCard(id: String, onComplete: () -> Unit) {
+        getDataSource().deleteCard(id, onComplete)
+    }
+
+    override fun clearCards(onComplete: () -> Unit) {
+        getDataSource().clearCards(onComplete)
+    }
+
+    override fun transact(onTrasaction: () -> Unit) {
+        getDataSource().transact(onTrasaction)
     }
 
     override fun getListNames(

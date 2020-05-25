@@ -9,7 +9,8 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import app.kevs.biyang.getlist.libs.AdapterOrientation
 import app.kevs.biyang.getlist.libs.GroceryItemAdapter
 import app.kevs.biyang.getlist.libs.Helper
 import app.kevs.biyang.getlist.libs.TravelumHelper
@@ -245,8 +246,9 @@ class MainActivity : AppCompatActivity() {
                 items.addAll(sorted)
             }
 
-            rc_items.layoutManager = LinearLayoutManager(this)
-            rc_items.adapter = GroceryItemAdapter(this, items, onRowClick = {
+//            rc_items.layoutManager = LinearLayoutManager(this)
+            rc_items.layoutManager = GridLayoutManager(this, 3)
+            rc_items.adapter = GroceryItemAdapter(this, items, AdapterOrientation.HORIZONTAL, onRowClick = {
                 openItemPreview(it)
             }){
                 Helper.toast(this, "Feature not available")

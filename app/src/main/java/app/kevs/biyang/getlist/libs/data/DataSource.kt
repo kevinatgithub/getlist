@@ -2,6 +2,8 @@ package app.kevs.biyang.getlist.libs.data
 
 import app.kevs.biyang.getlist.libs.models.GroceryItem
 import app.kevs.biyang.getlist.libs.models.ItemAlternative
+import app.kevs.biyang.getlist.libs.models.MonsterCard
+import io.realm.RealmResults
 
 interface DataSource {
 
@@ -73,4 +75,18 @@ interface DataSource {
 
     fun getCategoriesFromItems(onSuccess: (items: ArrayList<String>) -> Unit,
                                onError: (message: Throwable) -> Unit)
+
+    fun getCards(onResult: (cards : RealmResults<MonsterCard>) -> Unit)
+
+    fun getCard(_id : String, onResult : (card : MonsterCard?) -> Unit)
+
+    fun createCard(card : MonsterCard, onComplete : () -> Unit)
+
+    fun updateCard(card : MonsterCard, onComplete: () -> Unit)
+
+    fun deleteCard(id : String, onComplete: () -> Unit)
+
+    fun clearCards(onComplete: () -> Unit)
+
+    fun transact(onTrasaction: () -> Unit)
 }
