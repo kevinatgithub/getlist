@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_dark"
+    android:orientation="vertical"
+    tools:context=".MonsterCardsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20.7dp">
+
+                <TextView
+                    android:id="@+id/action_apply_defaults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Apply Defaults"
+                    android:textColor="@color/blue" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/action_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Submit Form"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Spell Name"
+                    android:inputType="text"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Spell Description"
+                    android:inputType="text"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_earth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Earth Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Wind Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Water Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_fire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Fire Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Light Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Dark Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:text="Add Effect"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="right"
+                android:layout_marginTop="20.7dp"
+                android:textColor="@color/blue"
+                android:id="@+id/action_add_effect"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_json_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minLines="8"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Spell Effects"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_dark"
+    android:orientation="vertical"
+    tools:context=".MonsterCardsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20.7dp">
+
+                <TextView
+                    android:id="@+id/action_apply_defaults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Apply Defaults"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Delete AI"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/action_delete_ai"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:id="@+id/action_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Submit Form"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Name"
+                    android:inputType="text"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Description"
+                    android:inputType="text"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:visibility="invisible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Base Health"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_armor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Base Armor"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_damage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Base Damage"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_spell_damage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter Base Spell Damage"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Draw %"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_tackle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Tackle %"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_earth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Earth Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Wind Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Water Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_fire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Fire Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Light Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Base Dark Runes"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_runes_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Minimum runes per draw"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <EditText
+                    android:id="@+id/txt_ai_runes_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transferent"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:hint="Enter AI Maximum runes per draw"
+                    android:inputType="number"
+                    android:textColor="@color/graydark"
+                    android:textColorHint="@color/graydark"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

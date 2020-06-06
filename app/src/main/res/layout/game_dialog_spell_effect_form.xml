@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_dark"
+    android:orientation="vertical"
+    tools:context=".MonsterCardsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:orientation="horizontal"
+>
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/action_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Done"
+                    android:textColor="@color/blue"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Target"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:id="@+id/switch_target"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:layout_marginLeft="20.7dp"
+                    android:id="@+id/lbl_target"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/lbl_prop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:fontFamily="@font/sf_pro_display_regular" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="7"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/sb_prop"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:text="="
+                    android:id="@+id/lbl_operator"/>
+
+
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="2"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/sb_operator"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/lbl_value"
+                    />
+
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="15"
+                    android:layout_marginLeft="26dp"
+                    android:id="@+id/sb_value"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

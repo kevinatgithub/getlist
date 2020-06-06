@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import app.kevs.biyang.getlist.R;
+import app.kevs.biyang.game.R;
 import model.Hotel_page_travelum_model;
 
 public class Hotel_page_travelum_adapter extends RecyclerView.Adapter<Hotel_page_travelum_adapter.ViewHolder> {

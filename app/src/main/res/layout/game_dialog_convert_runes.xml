@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_white_dark"
+    android:orientation="vertical"
+    tools:context=".MonsterCardsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:orientation="horizontal"
+                android:paddingBottom="20.7dp">
+
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/action_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Convert Runes"
+                    android:textColor="@color/blue" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <Spinner
+                    android:id="@+id/spinner_src_rune"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro_display_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20.7dp"
+                android:background="@drawable/rect_gray_border"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <Spinner
+                    android:id="@+id/spinner_target_rune"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro_display_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.7dp"
+                android:layout_marginRight="30.7dp"
+                android:layout_marginTop="20.7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:id="@+id/txt_runes_min"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:id="@+id/txt_runes_val"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:id="@+id/txt_runes_max"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+
+            </LinearLayout>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar_quantity"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:layout_marginTop="20.7dp" />
+
+            <TextView
+                android:id="@+id/txt_runes_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/sfpro_display_bold"
+                android:layout_marginLeft="20.7dp"
+                android:layout_marginRight="20.7dp"
+                android:layout_marginTop="20.7dp"
+                android:textSize="30dp"
+                android:gravity="right"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
