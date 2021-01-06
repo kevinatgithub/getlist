@@ -75,9 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_display_medium"
-            android:hint="Enter Card Name"
+            android:hint="Enter SCP Number"
             android:background="@color/transferent"
-            android:inputType="text"
+            android:inputType="number"
             android:textColor="@color/graydark"
             android:textColorHint="@color/graydark"
             android:textSize="15sp" />
@@ -93,18 +93,21 @@
             android:textSize="14sp" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/action_select_category"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:src="@drawable/ic_cards" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/action_upload"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:src="@drawable/ic_load" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/action_download"
             android:layout_width="wrap_content"
             android:layout_height="20dp"

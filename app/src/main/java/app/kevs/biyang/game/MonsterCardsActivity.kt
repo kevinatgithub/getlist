@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
+import android.view.View.GONE
 import android.widget.ProgressBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,7 @@ import kotlinx.android.synthetic.main.game_dialog_image_change.*
 import kotlinx.android.synthetic.main.game_dialog_image_preview.*
 import kotlinx.android.synthetic.main.getlist_dialog_item_preview.*
 import java.util.*
+import kotlin.math.log
 
 class MonsterCardsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -161,10 +164,13 @@ class MonsterCardsActivity : AppCompatActivity() {
     }
 
     private fun initMultiEntry() {
-        Helper.prompt(this,"", "Enter names in different lines"){
+        val skillNames = SpellBook.getSpells(api!!).map { it.name }
+        Helper.prompt(this,"", "Enter SCP numbers in different lines"){
             itemsswipetorefresh.isRefreshing = true
             val parts = it.split("\n")
             parts.forEach {
+                val randomSkillIndex = (0..skillNames.size-1).random()
+                val cardSkill = skillNames[randomSkillIndex]
                 val name = it.trim()
                 async {
                     val imgs = await { Helper.getRelatedImagesUrlFromWeb(name,1) }
@@ -181,7 +187,7 @@ class MonsterCardsActivity : AppCompatActivity() {
                         name,
                         description,
                         url,
-                        null
+                        cardSkill
                     )
                     api?.createCard(record){
 
@@ -207,8 +213,12 @@ class MonsterCardsActivity : AppCompatActivity() {
         async {
             val images = await { Helper.getRelatedImagesUrlFromWeb(name,1) }
             var url = images[0]
-            var bmp = await { Helper.getBitmapFromUrl(url) }
-            url = Helper.encodeImageToBase64(Helper.getResizedBitmap(bmp!!, 300)!!)!!
+            try {
+                var bmp = await { Helper.getBitmapFromUrl(url) }
+                url = Helper.encodeImageToBase64(Helper.getResizedBitmap(bmp!!, 300)!!)!!
+            } catch (ex : Exception) {
+                Log.e("scperror",ex.message);
+            }
 //            url = Helper.saveImage(this@MonsterCardsActivity, bmp!!, name).toString()
 
             var description = await { Helper.getDescriptionFromWikipedia(name)}
@@ -292,17 +302,7 @@ class MonsterCardsActivity : AppCompatActivity() {
                 }
                 lbl_description.setText("${card.skill ?: "Not Set"}\n${lbl_description.text}")
                 lbl_description.setOnClickListener {
-                    this.dismiss()
-                    Helper.promptSpinner(this@MonsterCardsActivity,"Encanto","Select from unassigned spells",availableSpells){
-                        val spell = it
-                        api?.transact { card.skill = spell.toUpperCase() }
-                        CARDS_ADAPTER?.notifyDataSetChanged()
-                    }
-//                    val rand = (0..availableSpells.size-1).random()
-//                    api?.transact {
-//                         card.skill = availableSpells[rand]
-//                    }
-//                    CARDS_ADAPTER?.notifyDataSetChanged()
+                    openDescription(card.description)
                 }
                 lbl_name.setText(card.name)
                 lbl_category.setText(card.category ?: "Not set")
@@ -335,10 +335,12 @@ class MonsterCardsActivity : AppCompatActivity() {
 
                 val dialog = this
                 action_complete.apply {
-                    text = "Set Category"
+                    text = "Show Description"
+//                    text = "Set Category"
                     setOnClickListener {
-                        dialog.dismiss()
-                        selectCategory(card, categories)
+                        openDescription(card.description)
+//                        dialog.dismiss()
+//                        selectCategory(card, categories)
                     }
                 }
                 action_remove.setOnClickListener {
@@ -360,6 +362,20 @@ class MonsterCardsActivity : AppCompatActivity() {
                         CARDS = UNFILTERED_CARDS?.filter { it.name?.toUpperCase()?.contains(this@MonsterCardsActivity.txt_name.text.toString().toUpperCase())!! }
                     }
                 }
+            }
+        }
+    }
+
+    private fun openDescription(description: String?) {
+        TravelumHelper.ShowDialog(this,R.layout.getlist_dialog_item_preview,1.0){
+            it.apply {
+                lbl_name.visibility = GONE;
+                lbl_category.visibility = GONE;
+                img_thumb.visibility = GONE;
+                lbl_description.setText(description)
+                action_complete.visibility = GONE;
+                action_remove.visibility = GONE;
+                action_update.visibility = GONE;
             }
         }
     }

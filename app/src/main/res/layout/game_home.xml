@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/scpbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/scpbackground" />
+
+    <ImageView
+        android:id="@+id/imgCards"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:tint="@color/graylight"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSpells"
+        app:layout_constraintEnd_toStartOf="@+id/imgSpells"
+        app:layout_constraintTop_toTopOf="@+id/imgSpells"
+        app:srcCompat="@drawable/ic_cards" />
+
+    <ImageView
+        android:id="@+id/imgSpells"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="108dp"
+        android:tint="@color/graylight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/imgDuelAI"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:tint="@color/smokegray"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSpells"
+        app:layout_constraintStart_toEndOf="@+id/imgSpells"
+        app:layout_constraintTop_toTopOf="@+id/imgSpells"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <TextView
+        android:id="@+id/lblCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SCP Cards"
+        android:textColor="@color/graylight"
+        app:layout_constraintEnd_toEndOf="@+id/imgCards"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/imgCards"
+        app:layout_constraintTop_toBottomOf="@+id/imgCards" />
+
+    <TextView
+        android:id="@+id/lblSpells"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spell Book"
+        android:textColor="@color/graylight"
+        app:layout_constraintEnd_toEndOf="@+id/imgSpells"
+        app:layout_constraintStart_toStartOf="@+id/imgSpells"
+        app:layout_constraintTop_toTopOf="@+id/lblCards" />
+
+    <TextView
+        android:id="@+id/lblDuelAI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duel with AI"
+        android:textColor="@color/graylight"
+        app:layout_constraintEnd_toEndOf="@+id/imgDuelAI"
+        app:layout_constraintStart_toStartOf="@+id/imgDuelAI"
+        app:layout_constraintTop_toTopOf="@+id/lblSpells" />
+</androidx.constraintlayout.widget.ConstraintLayout>

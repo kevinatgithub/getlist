@@ -272,7 +272,9 @@ class BattleGroundActivity : AppCompatActivity() {
                     }
                 }
 
-                action_complete.visibility = View.GONE
+                action_complete.setOnClickListener {
+                    openDescription(card.description)
+                }
                 action_update.text = "Tackle"
                 action_update.setOnClickListener {
                     PLAYER!!.cards!!.remove(card)
@@ -300,6 +302,21 @@ class BattleGroundActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun openDescription(description: String?) {
+        TravelumHelper.ShowDialog(this,R.layout.getlist_dialog_item_preview,1.0){
+            it.apply {
+                lbl_name.visibility = View.GONE;
+                lbl_category.visibility = View.GONE;
+                img_thumb.visibility = View.GONE;
+                lbl_description.setText(description)
+                action_complete.visibility = View.GONE;
+                action_remove.visibility = View.GONE;
+                action_update.visibility = View.GONE;
+            }
+        }
+    }
+
 
     private fun openImagePreview(imgUrl: String) {
         TravelumHelper.ShowDialog(this,R.layout.game_dialog_image_preview,0.8){

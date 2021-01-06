@@ -60,7 +60,7 @@ class MonsterCardAdapter(val ctx : Context,
             } else {
                 item?.description?.length
             }
-            val skill = spells.find { it.name.toUpperCase().equals(item?.skill!!.toUpperCase()) }
+            val skill = spells.find { it.name?.toUpperCase().equals(item?.skill?.toUpperCase()) }
             description.text = """
                 ${item?.skill ?: "No Skill"}
                 ${skill?.description ?: "User Spell"}

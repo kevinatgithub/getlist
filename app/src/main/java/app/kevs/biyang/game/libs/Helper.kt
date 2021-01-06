@@ -18,6 +18,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import app.kevs.biyang.game.R
 import com.google.gson.Gson
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -126,11 +127,11 @@ object Helper {
     }
 
     fun prompt(ctx : Context,
-               title : String = "Encanto",
+               title : String = ctx.getString(R.string.app_name),
                message : String,
                onSubmit : (input : String) -> Unit){
         val inputAlert = AlertDialog.Builder(ctx)
-        inputAlert.setTitle("Encanto")
+        inputAlert.setTitle(ctx.getString(R.string.app_name))
         inputAlert.setMessage(message)
         val userInput = EditText(ctx)
         inputAlert.setView(userInput)
@@ -180,7 +181,8 @@ object Helper {
         }
     }
 
-    fun getRelatedImagesUrlFromWeb(keyword : String, resultCount : Int = 10) : ArrayList<String>{
+    fun getRelatedImagesUrlFromWeb(scpNo : String, resultCount : Int = 10) : ArrayList<String>{
+        val keyword = "scp-" + scpNo.padStart(3,'0')
         var url = "https://ph.images.search.yahoo.com/search/images;_ylt=AwrxhZU7hLZerxMAKr60Rwx.;_ylc=X1MDMjExNDczNDAwNARfcgMyBGZyAwRncHJpZANUM1AwS1ZEbFR2ZUxvVzBwMzRyQl9BBG5fc3VnZwMxMARvcmlnaW4DcGguaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMEcXN0cmwDNgRxdWVyeQN0YWxvbmcEdF9zdG1wAzE1ODkwMTk3NTM-?fr2=sb-top-ph.images.search&p=KEYWORD&ei=UTF-8&iscqry=&fr=sfp"
         url = url.replace("KEYWORD", keyword)
 
@@ -196,16 +198,19 @@ object Helper {
         return result
     }
 
-    fun getDescriptionFromWikipedia(keyword : String) : String?{
+    fun getDescriptionFromWikipedia(scpNo : String) : String?{
+        val keyword = "scp-" + scpNo.padStart(3,'0')
         val nkeyword = keyword.replace(" ","_")
-        var url = "https://en.wikipedia.org/wiki/KEYWORD"
+//        var url = "https://en.wikipedia.org/wiki/KEYWORD"
+        var url = "http://scpwiki.com/KEYWORD"
         url = url.replace("KEYWORD", nkeyword)
 
         val result = ArrayList<String>()
         try {
 
             val document: Document = Jsoup.connect(url).validateTLSCertificates(false).get()
-            val div : Element = document.select("div#mw-content-text").first()
+//            val div : Element = document.select("div#mw-content-text").first()
+            val div : Element = document.select("div#page-content").first()
             if (div == null){
                 return null
             }
@@ -213,12 +218,14 @@ object Helper {
             if (div2 == null){
                 return null
             }
-            val ps = div2.select("p").take(100)
+            val ps = div2.select("p") //.take(100)
+            var description = ""
             ps.forEach {
-                if (it.text().length > 0 && !it.text().equals("${keyword.capitalize()} may refer to:"))
-                    return it.text()
+//                if (it.text().length > 0 && !it.text().equals("${keyword.capitalize()} may refer to:"))
+//                    return it.text()
+                description += "\n" + it.text()
             }
-            return null
+            return description
         }catch (e : java.lang.Exception){
             return null
         }
